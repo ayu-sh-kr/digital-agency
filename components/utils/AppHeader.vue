@@ -89,17 +89,8 @@ export interface Links {
     </div>
     <div class="col-span-1 flex items-center justify-end md:px-3">
         <UButton
-            v-if="isDark"
-            icon="i-heroicons-moon-20-solid"
-            size="sm"
-            color="primary"
-            square
-            variant="solid"
-            @click="toggleDark()"
-        />
-        <UButton
-            v-else
-            icon="i-heroicons-sun-20-solid"
+            dynamic
+            :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'"
             size="sm"
             color="primary"
             square
