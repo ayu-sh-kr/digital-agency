@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxt/ui": "^2.17.0",
     "@vueuse/core": "^10.11.0",
+    "@vueuse/motion": "^2.2.3",
     "@vueuse/shared": "^10.11.0",
     "nuxt": "^3.12.3",
     "vue": "latest"
