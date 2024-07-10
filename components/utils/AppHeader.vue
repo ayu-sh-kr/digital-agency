@@ -75,13 +75,13 @@ export interface Links {
 <header class="grid md:grid-cols-4 grid-cols-2 px-3 place-content-center py-3 font-tahoma sticky top-0 z-30 "
         :class="{'bg-transparent backdrop-blur shadow-none hover:shadow-md animate-up': isScrolled, '': !isScrolled, 'animate-down': headerVisible}"
 >
-    <div class="col-span-1 font-semibold text-3xl text-teal-600">Logo</div>
+    <div class="col-span-1 font-semibold text-3xl text-primary">Logo</div>
     <div class="col-span-2 md:flex items-center justify-center hidden">
         <ul class="flex items-center justify-center gap-x-5">
             <li
                 v-for="item in items"
-                class="hover:text-teal-600 text-lg"
-                :class="{'text-teal-600': activeHeader.label === item.label}"
+                class="hover:text-primary text-lg"
+                :class="{'text-primary': activeHeader.label === item.label}"
             >
                 <NuxtLink :to="item.url">{{item.label}}</NuxtLink>
             </li>
@@ -89,7 +89,17 @@ export interface Links {
     </div>
     <div class="col-span-1 flex items-center justify-end md:px-3">
         <UButton
-            :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'"
+            v-if="isDark"
+            icon="i-heroicons-moon-20-solid"
+            size="sm"
+            color="primary"
+            square
+            variant="solid"
+            @click="toggleDark()"
+        />
+        <UButton
+            v-else
+            icon="i-heroicons-sun-20-solid"
             size="sm"
             color="primary"
             square
