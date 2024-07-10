@@ -87,7 +87,7 @@ export interface Links {
             </li>
         </ul>
     </div>
-    <div class="col-span-1 flex items-center justify-end px-3">
+    <div class="col-span-1 flex items-center justify-end md:px-3">
         <UButton
             :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'"
             size="sm"
