@@ -31,6 +31,9 @@ export default <Partial<Config>>{
         'verdana': ['Verdana', 'sans-serif'],
         'georgia': ['Georgia', 'serif'],
       },
+      colors: {
+          primary: 'teal-600'
+      },
     },
   },
   plugins: [],
