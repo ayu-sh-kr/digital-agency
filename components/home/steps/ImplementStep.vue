@@ -4,7 +4,7 @@ import SectionHeader from "~/components/utils/SectionHeader.vue";
 </script>
 
 <template>
-    <section v-motion-pop-visible class="px-3 py-12 sm:py-16 md:py-20 font-tahoma">
+    <section v-motion-pop-visible-once class="px-3 py-12 sm:py-16 md:py-20 font-tahoma">
         <div class="text-center">
             <SectionHeader simple_text="Digital Marketing" color_text="Implement" />
             <div class="py-16 grid md:grid-cols-2 grid-cols-1 place-items-center place-content-center gap-y-5">
