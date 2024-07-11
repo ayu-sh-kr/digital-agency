@@ -88,13 +88,11 @@ export interface Links {
         </ul>
     </div>
     <div class="col-span-1 flex items-center justify-end md:px-3">
-        <UButton
+        <UIcon
+            class="text-primary w-8 h-8 hover:bg-gray-300 dark:hover:bg-gray-800 p-1 rounded-lg cursor-pointer"
             dynamic
-            :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'"
-            size="sm"
+            :name="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'"
             color="primary"
-            square
-            variant="solid"
             @click="toggleDark()"
         />
     </div>
