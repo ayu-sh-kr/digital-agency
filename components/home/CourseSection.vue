@@ -3,6 +3,23 @@
 import SectionHeader from "~/components/utils/SectionHeader.vue";
 import CourseCard, {type CourseData} from "~/components/home/course/CourseCard.vue";
 
+const colors = [
+    {
+        light: 'bg-violet-200 text-violet-400',
+        dark: 'dark:bg-violet-500 dark:text-violet-800'
+    },
+
+    {
+        light: 'bg-emerald-200 text-emerald-400',
+        dark: 'dark:bg-emerald-500 dark:text-emerald-800'
+    },
+
+    {
+        light: 'bg-orange-200 text-orange-400',
+        dark: 'dark:bg-orange-500 dark:text-orange-800'
+    }
+]
+
 const items: CourseData[] = [
     {
         icon: 'mdi:account-card',
@@ -47,7 +64,7 @@ const items: CourseData[] = [
     <SectionHeader simple_text="Offered" color_text="Courses"/>
 
     <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 place-items-center gap-y-10">
-        <CourseCard v-for="item in items" :data="item"/>
+        <CourseCard v-for="(item, index) in items" :data="item" :light="colors[index].light" :dark="colors[index].dark"/>
     </div>
 </section>
 </template>
