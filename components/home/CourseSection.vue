@@ -6,17 +6,20 @@ import CourseCard, {type CourseData} from "~/components/home/course/CourseCard.v
 const colors = [
     {
         light: 'bg-violet-200 text-violet-400',
-        dark: 'dark:bg-violet-500 dark:text-violet-800'
+        dark: 'dark:bg-violet-500 dark:text-violet-800',
+        color: 'violet'
     },
 
     {
         light: 'bg-emerald-200 text-emerald-400',
-        dark: 'dark:bg-emerald-500 dark:text-emerald-800'
+        dark: 'dark:bg-emerald-500 dark:text-emerald-800',
+        color: 'emerald'
     },
 
     {
         light: 'bg-orange-200 text-orange-400',
-        dark: 'dark:bg-orange-500 dark:text-orange-800'
+        dark: 'dark:bg-orange-500 dark:text-orange-800',
+        color: 'orange'
     }
 ]
 
@@ -64,7 +67,7 @@ const items: CourseData[] = [
     <SectionHeader simple_text="Offered" color_text="Courses"/>
 
     <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 place-items-center gap-y-10">
-        <CourseCard v-for="(item, index) in items" :data="item" :light="colors[index].light" :dark="colors[index].dark"/>
+        <CourseCard v-for="(item, index) in items"  :data="item" :light="colors[index].light" :dark="colors[index].dark" :color="colors[index].color"/>
     </div>
 </section>
 </template>
