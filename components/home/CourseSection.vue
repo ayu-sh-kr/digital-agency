@@ -14,15 +14,39 @@ const items: CourseData[] = [
             'Website & SEO Shaastra',
             'PPC Advertising Shaastra & Much More'
         ]
+    },
+
+    {
+        icon: 'mdi:currency-rupee',
+        label: 'DhanNeeti',
+        description: [
+            'Create New & Multiple Sources Of Income',
+            'MSI Shaastra',
+            'Affiliate Marketing Shaastra',
+            'Content Marketing Shaastra',
+            'Influencer Marketing Shaastra & Much More'
+        ]
+    },
+
+    {
+        icon: 'mdi:crown',
+        label: 'RaajNeeti',
+        description: [
+            'Scale Up Your Business With Automations',
+            'Tribe Building Mastery',
+            'Automation Mastery',
+            'Webinar Selling Mastery',
+            'Group Consultations & Much More'
+        ]
     }
 ]
 </script>
 
 <template>
-<section class="px-3 font-tahoma dark:bg-gray-950 bg-gray-200 py-10">
+<section class="px-3 font-tahoma py-10">
     <SectionHeader simple_text="Offered" color_text="Courses"/>
 
-    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 place-items-center">
+    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 place-items-center gap-y-10">
         <CourseCard v-for="item in items" :data="item"/>
     </div>
 </section>
