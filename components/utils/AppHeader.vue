@@ -31,7 +31,7 @@ const route = useRoute();
 const activeHeader = computed(() => items.find(item => item.url === route.path) || {label: '', to: ''});
 
 
-const items: Links[] = [
+const items: Link[] = [
     {
         url: '/',
         label: 'Home'
@@ -65,7 +65,7 @@ const items: Links[] = [
 
 
 
-export interface Links {
+export interface Link {
     url: string,
     label: string
 }
