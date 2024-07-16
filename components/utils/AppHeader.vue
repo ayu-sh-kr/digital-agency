@@ -2,9 +2,13 @@
 
 import {useDark} from "@vueuse/core";
 import {useToggle} from "@vueuse/shared";
+import AppSideNav from "~/components/utils/AppSideNav.vue";
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
+
+const isSideNav = ref<boolean>(true);
+const toggleSideNav = useToggle(isSideNav);
 
 
 let isScrolled = ref(false);
@@ -87,7 +91,7 @@ export interface Link {
             </li>
         </ul>
     </div>
-    <div class="col-span-1 flex items-center justify-end md:px-3">
+    <div class="col-span-1 flex items-center justify-end gap-x-5">
         <UIcon
             class="text-primary w-8 h-8 hover:bg-gray-300 dark:hover:bg-gray-800 p-1 rounded-lg cursor-pointer"
             dynamic
@@ -95,8 +99,19 @@ export interface Link {
             color="primary"
             @click="toggleDark()"
         />
+        <div class="sm:hidden block">
+            <UIcon
+                class="text-primary w-8 h-8 hover:bg-gray-300 dark:hover:bg-gray-800 p-1 rounded-lg cursor-pointer"
+                dynamic
+                name="i-heroicons-bars-3"
+                @click="toggleSideNav()"
+            />
+        </div>
     </div>
 </header>
+<div class="sm:hidden block absolute z-30 right-0">
+    <AppSideNav :hidden="isSideNav"/>
+</div>
 </template>
 
 <style scoped>
