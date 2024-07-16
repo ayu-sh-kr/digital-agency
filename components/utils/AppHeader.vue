@@ -109,7 +109,7 @@ export interface Link {
         </div>
     </div>
 </header>
-<div class="sm:hidden block absolute z-30 right-0">
+<div class="w-1/3 fixed top-16 right-0 z-30 lg:hidden">
     <AppSideNav :hidden="isSideNav"/>
 </div>
 </template>
