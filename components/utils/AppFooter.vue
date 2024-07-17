@@ -24,15 +24,6 @@ const menu: Link[] = [
         label: 'About'
     },
 
-    {
-        url: '/blogs',
-        label: 'Blogs'
-    },
-
-    {
-        url: '/shop',
-        label: 'Shop'
-    }
 ];
 
 
@@ -85,7 +76,7 @@ const knots: Link[] = [
 
 <template>
     <footer class="px-2 py-10 bg-black dark:bg-white text-gray-100 dark:text-gray-950">
-        <div class="grid grid-cols-2 md:grid-cols-5 sm:place-content-start sm:place-items-start gap-y-5">
+        <div class="grid grid-cols-2 md:grid-cols-5 sm:place-content-start sm:place-items-center gap-y-5">
             <div class="col-span-2 sm:px-3 flex flex-col justify-between gap-y-10">
                 <div>
                     <h4 class="text-gray-200 dark:text-gray-900 font-thin font-aktive sm:font-dm text-sm tracking-wide">ABOUT DIGITAL AGENCY</h4>
