@@ -18,6 +18,10 @@ const props = defineProps({
 
     light: {
         type: String
+    },
+
+    icon: {
+        type: String
     }
 })
 
@@ -35,7 +39,7 @@ export interface CourseData {
 >
     <div class="py-12">
         <Icon :name="data.icon" class="w-24 h-24"
-              :class=" light ? `${light} ` : ' ' + dark ? `${dark} ` : ' '"
+              :class=" icon ? `${icon} ` : ' '"
         />
     </div>
     <h1 class="text-center lg:text-4xl md:text-3xl">{{data.label}}</h1>
